@@ -56,3 +56,11 @@ pub enum TaskStatus {
     Completed,
     Cancelled,
 }
+
+#[derive(BorshSerialize, BorshDeserialize)]
+
+pub struct IntializeTaskData {
+    pub title : String,
+    pub description : String,
+    pub amount : String
+}

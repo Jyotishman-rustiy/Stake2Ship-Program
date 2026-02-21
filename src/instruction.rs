@@ -5,6 +5,8 @@ use solana_program::program_error::ProgramError;
 
 pub enum FreelanceInstruction {
     InitializeTask {
+        title: String,
+        description : String,
         amount :u64,
     },
     FundTask,
@@ -22,3 +24,5 @@ impl  FreelanceInstruction {
         Self::try_from_slice(input).map_err(|_| ProgramError::InvalidInstructionData)
     }
 }
+
+
